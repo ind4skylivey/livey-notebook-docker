@@ -1,0 +1,20 @@
+# Secrets
+docker.env
+.env
+*.env
+
+# Data directories (persist locally, do not commit)
+notebook_data/
+surreal_single_data/
+setup_guide/notebook_data/
+setup_guide/surreal_single_data/
+
+# OS specific
+.DS_Store
+thumbs.db
+
+# Python/Misc generated
+__pycache__/
+*.pyc
+.ipynb_checkpoints
+doc_exports/

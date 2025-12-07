@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Open Notebook Docker
+Comment=Start the Open Notebook containerized stack
+Exec=/media/il1v3y/HD2/open-notebook/scripts/open_notebook_docker.sh start
+Terminal=true
+Type=Application
+Categories=Development;
+Icon=/media/il1v3y/HD2/open-notebook/docs/assets/hero.svg
