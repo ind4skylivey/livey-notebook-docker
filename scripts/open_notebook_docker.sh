@@ -4,6 +4,22 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 COMPOSE_FILE="$PROJECT_ROOT/setup_guide/docker-compose.yml"
+COMPOSE_DIR="$(dirname "$COMPOSE_FILE")"
+ENV_FILE="$COMPOSE_DIR/docker.env"
+ENV_EXAMPLE="$COMPOSE_DIR/docker.env.example"
+
+# Auto-generate docker.env if missing
+if [[ ! -f "$ENV_FILE" ]]; then
+  if [[ -f "$ENV_EXAMPLE" ]]; then
+    echo "⚠️  Setup: 'docker.env' not found. Creating it from default template..."
+    cp "$ENV_EXAMPLE" "$ENV_FILE"
+    echo "✅  Created: $ENV_FILE"
+    echo "ℹ️   (Optional) Edit this file to add API keys (OpenAI/Anthropic)."
+  else
+    echo "❌ Error: Neither '$ENV_FILE' nor '$ENV_EXAMPLE' found. Configuration missing."
+    exit 1
+  fi
+fi
 
 open_url() {
   local url="$1"
