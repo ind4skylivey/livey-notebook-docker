@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="banner.svg" alt="Livey Notebook Banner" width="100%" />
+</div>
+
 # 📓 Livey Notebook Docker
 
 > **"Your second brain, containerized and stylized."** 🧠✨

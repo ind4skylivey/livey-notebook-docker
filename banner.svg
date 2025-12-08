@@ -1,0 +1,37 @@
+<svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Catppuccin Macchiato Palette -->
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&amp;display=swap');
+      .bg { fill: #24273a; }
+      .surface { fill: #363a4f; }
+      .text-main { fill: #c6a0f6; font-family: 'Courier New', monospace; font-size: 80px; font-weight: bold; }
+      .text-sub { fill: #8aadf4; font-family: 'Courier New', monospace; font-size: 30px; letter-spacing: 4px; }
+      .accent { fill: #a6da95; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" class="bg" rx="15" ry="15"/>
+  
+  <!-- Terminal Window Decoration -->
+  <circle cx="40" cy="40" r="10" fill="#ed8796"/> <!-- Red -->
+  <circle cx="75" cy="40" r="10" fill="#eed49f"/> <!-- Yellow -->
+  <circle cx="110" cy="40" r="10" fill="#a6da95"/> <!-- Green -->
+
+  <!-- Decorative Brackets -->
+  <text x="60" y="230" class="surface" font-size="120" font-family="monospace" opacity="0.3">&lt;</text>
+  <text x="1080" y="230" class="surface" font-size="120" font-family="monospace" opacity="0.3">/&gt;</text>
+
+  <!-- Main Content -->
+  <text x="50%" y="48%" dominant-baseline="middle" text-anchor="middle" class="text-main">
+    LIVEY NOTEBOOK
+  </text>
+  
+  <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" class="text-sub">
+    DOCKER EDITION
+  </text>
+
+  <!-- Bottom Accent Line -->
+  <rect x="400" y="300" width="400" height="2" class="text-sub" rx="1" opacity="0.5"/>
+</svg>
